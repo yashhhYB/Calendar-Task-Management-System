@@ -31,7 +31,7 @@ A responsive calendar and task management application built with PHP, SQLite, an
 The database (`database.sqlite`) will be automatically created in the `includes` directory upon the first database interaction if it doesn't exist, using the schema defined in `schema.sql`.
 
 ## Project Structure
-- `/api`: Backend API endpoints for AJAX requests.
+- `api.PHP`: Backend API endpoints for AJAX requests.
 - `/assets`: CSS and JavaScript files.
 - `/includes`: PHP helper classes and database connection.
 - `index.php`: Main application entry point.
