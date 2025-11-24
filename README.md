@@ -8,6 +8,8 @@ A responsive calendar and task management application built with PHP, SQLite, an
 - **Filtering**: Filter by priority, category, status, and date range.
 - **Search**: Text-based search for tasks.
 - **Responsive UI**: Built with Tailwind CSS for mobile and desktop support.
+- **CSV Import/Export**: Easily backup and restore your tasks.
+- **Interactive Experience**: Uses AJAX for seamless, page-refresh-free updates.
 
 ## Setup Instructions
 
@@ -28,16 +30,16 @@ A responsive calendar and task management application built with PHP, SQLite, an
    ```
 4. Open your browser and visit `http://localhost:8000`.
 
-The database (`database.sqlite`) will be automatically created in the `includes` directory upon the first database interaction if it doesn't exist, using the schema defined in `schema.sql`.
+The database (`database.sqlite`) will be automatically created in the root directory upon the first database interaction if it doesn't exist, using the schema defined in `schema.sql`.
 
 ## Project Structure
-- `api.PHP`: Backend API endpoints for AJAX requests.
-- `/assets`: CSS and JavaScript files.
-- `/includes`: PHP helper classes and database connection.
-- `index.php`: Main application entry point.
+- `index.php`: Main application entry point (HTML structure).
+- `script.js`: Frontend logic (DOM manipulation, event handling, API calls).
+- `api.php`: Consolidated backend logic (Database connection, API endpoints).
+- `tasks.json`: Fallback storage if SQLite is not available.
 - `schema.sql`: Database schema definition.
 
 ## Technologies
 - **Backend**: PHP (Vanilla)
-- **Database**: SQLite
-- **Frontend**: HTML5, Tailwind CSS (CDN), JavaScript (Vanilla)
+- **Database**: SQLite (with JSON fallback)
+- **Frontend**: HTML5, Tailwind CSS (CDN), JavaScript (AJAX)
